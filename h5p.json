@@ -1,0 +1,21 @@
+{
+    "title": "Nonscoreable Drag Text",
+    "language": "en",
+    "mainLibrary": "H5P.NonscoreableDragQuestion",
+    "embedTypes": [
+      "iframe"
+    ],
+    "authors": [
+      {
+        "name": "Atabic",
+        "role": "Author"
+      }
+    ],
+    "preloadedDependencies": [
+      {
+        "machineName": "H5P.NonscoreableDragQuestion",
+        "majorVersion": "1",
+        "minorVersion": "0"
+      }
+    ]
+}
