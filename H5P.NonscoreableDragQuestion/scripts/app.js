@@ -1114,7 +1114,7 @@
    * @return {Object} xAPI data
    */
   C.prototype.getXAPIData = function () {
-    var xAPIEvent = this.createXAPIEventTemplate('answered');
+    var xAPIEvent = this.createXAPIEventTemplate('interacted');
     this.addQuestionToXAPI(xAPIEvent);
     this.addResponseToXAPI(xAPIEvent);
     return {
@@ -1326,7 +1326,7 @@
       that.showAllSolutions();
       // that.showScore();
       that.addExplanation();
-      var xAPIEvent = that.createXAPIEventTemplate('answered');
+      var xAPIEvent = that.createXAPIEventTemplate('interacted');
       that.addQuestionToXAPI(xAPIEvent);
       that.addResponseToXAPI(xAPIEvent);
       that.trigger(xAPIEvent);
