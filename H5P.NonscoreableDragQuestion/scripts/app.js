@@ -932,7 +932,6 @@
       });
       draggable.on('interacted', function () {
         self.answered = true;
-        self.triggerXAPI('interacted');
       });
       draggable.on('leavingDropZone', function (event) {
         self.dropZones[event.data.dropZone].removeAlignable(event.data.$);
@@ -1103,6 +1102,12 @@
     setTimeout(function () {
       self.trigger('resize');
     }, 200);
+
+    // for xapi duration
+    if (self.activityStartTime === undefined) {
+      self.activityStartTime = Date.now();
+    }
+
   };
   
   /**
@@ -1629,6 +1634,11 @@
     this.hideButton('try-again');
     this.removeFeedback();
     this.setExplanation();
+
+    // reset activity start time
+    if (this.activityStartTime) {
+      this.activityStartTime = Date.now();
+    }
   };
   
   /**
